@@ -1,5 +1,5 @@
 Running application:
-1. Navigate to Db folder in Logistics.Infrastructure. In ApplicationDbContext line 19, change to your connection string.
+1. Navigate to Db folder in Logistics.Infrastructure. In ApplicationDbContext line 19, replace "{server}" with your server name.
 2. Set Logistics.Infrastructure as startup project.
 3. In Package Manager Console, type Update-Database and enter.
 4. Set Logistics.Api as startup project.
