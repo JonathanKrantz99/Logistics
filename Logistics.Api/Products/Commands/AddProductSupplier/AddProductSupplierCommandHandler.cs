@@ -33,6 +33,11 @@ namespace Logistics.Api.Products.Commands.AddSupplier
                 return HandlerError.Create($"Supplier with id: {request.SupplierId} was not found.");
             }
 
+            if (product.SupplierExists(request.SupplierId))
+            {
+                return HandlerError.Create($"Product with id: {request.ProductId} already has supplier with id: {request.SupplierId}.");
+            }
+
             product.AddSupplier(request.SupplierId);
 
             await _unitOfWork.SaveChangesAsync();
