@@ -6,10 +6,10 @@ namespace Logistics.Api.Warehouses.Commands.MoveStockItems
     {
         public MoveStockItemsRequest(Guid targetWarehouseId, Guid productId, Guid supplierId, int quantity)
         {
-            this.TargetWarehouseId = targetWarehouseId;
-            this.ProductId = productId;
-            this.SupplierId = supplierId;
-            this.Quantity = quantity;
+            TargetWarehouseId = targetWarehouseId;
+            ProductId = productId;
+            SupplierId = supplierId;
+            Quantity = quantity;
         }
 
         [Required]

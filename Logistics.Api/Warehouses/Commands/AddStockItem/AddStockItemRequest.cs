@@ -4,10 +4,10 @@ namespace Logistics.Api.Warehouses.Commands.AddStockItem
 {
     public record AddStockItemRequest
     {
-        public AddStockItemRequest(Guid ProductId, Guid SupplierId, int quantity) 
+        public AddStockItemRequest(Guid productId, Guid supplierId, int quantity) 
         {
-            this.ProductId = ProductId;
-            this.SupplierId = SupplierId;
+            ProductId = productId;
+            SupplierId = supplierId;
             Quantity = quantity;
         }
 
@@ -17,7 +17,7 @@ namespace Logistics.Api.Warehouses.Commands.AddStockItem
         [Required]
         public Guid SupplierId { get; }
 
-        [Required]
+        [Range(1, int.MaxValue - 1)]
         public int Quantity { get; }
     }
 }

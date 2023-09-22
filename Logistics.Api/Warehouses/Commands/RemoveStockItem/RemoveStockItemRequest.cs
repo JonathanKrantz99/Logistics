@@ -4,20 +4,20 @@ namespace Logistics.Api.Warehouses.Commands.RemoveStockItem
 {
     public record RemoveStockItemRequest
     {
-        public RemoveStockItemRequest(Guid ProductId, Guid SupplierId, int Quantity)
+        public RemoveStockItemRequest(Guid productId, Guid supplierId, int quantity)
         {
-            this.ProductId = ProductId;
-            this.SupplierId = SupplierId;
-            this.Quantity = Quantity;
+            ProductId = productId;
+            SupplierId = supplierId;
+            Quantity = quantity;
         }
 
         [Required]
-        public Guid ProductId { get; }
+        public Guid ProductId { get; init; }
 
         [Required]
-        public Guid SupplierId { get; }
+        public Guid SupplierId { get; init; }
 
-        [Required]
-        public int Quantity { get; }
+        [Range(1, int.MaxValue - 1)]
+        public int Quantity { get; init; }
     }
 }
