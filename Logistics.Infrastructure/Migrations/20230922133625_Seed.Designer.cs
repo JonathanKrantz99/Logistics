@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Logistics.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230922130350_init")]
-    partial class init
+    [Migration("20230922133625_Seed")]
+    partial class Seed
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,6 +42,26 @@ namespace Logistics.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Product");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("04462214-e73d-4860-abf3-02e3bffd3837"),
+                            Name = "Keyboard",
+                            Removed = false
+                        },
+                        new
+                        {
+                            Id = new Guid("fad6955c-7d25-4656-ba26-c78b61f868b5"),
+                            Name = "Headset",
+                            Removed = false
+                        },
+                        new
+                        {
+                            Id = new Guid("d017ef34-c572-484f-8f0e-db6895820e84"),
+                            Name = "Monitor",
+                            Removed = false
+                        });
                 });
 
             modelBuilder.Entity("Logistics.Domain.Products.ProductSupplier", b =>
@@ -62,6 +82,26 @@ namespace Logistics.Infrastructure.Migrations
                     b.HasIndex("SupplierId");
 
                     b.ToTable("ProductSupplier");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("99fef197-a862-48e8-90e8-6b675e625ef5"),
+                            ProductId = new Guid("04462214-e73d-4860-abf3-02e3bffd3837"),
+                            SupplierId = new Guid("8ef6d8b1-94da-46aa-94ad-8ddc80c9543d")
+                        },
+                        new
+                        {
+                            Id = new Guid("0be823cd-f299-44a6-8302-54672694ce00"),
+                            ProductId = new Guid("fad6955c-7d25-4656-ba26-c78b61f868b5"),
+                            SupplierId = new Guid("8ef6d8b1-94da-46aa-94ad-8ddc80c9543d")
+                        },
+                        new
+                        {
+                            Id = new Guid("fa5126c2-7475-4664-a25c-c8afada544ac"),
+                            ProductId = new Guid("d017ef34-c572-484f-8f0e-db6895820e84"),
+                            SupplierId = new Guid("7f4c2666-36e8-4c00-aab7-934ff281a477")
+                        });
                 });
 
             modelBuilder.Entity("Logistics.Domain.Suppliers.Supplier", b =>
@@ -81,6 +121,20 @@ namespace Logistics.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Supplier");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("8ef6d8b1-94da-46aa-94ad-8ddc80c9543d"),
+                            Name = "Supplier 1",
+                            Removed = false
+                        },
+                        new
+                        {
+                            Id = new Guid("7f4c2666-36e8-4c00-aab7-934ff281a477"),
+                            Name = "Supplier 2",
+                            Removed = false
+                        });
                 });
 
             modelBuilder.Entity("Logistics.Domain.Warehouses.History", b =>
@@ -136,6 +190,40 @@ namespace Logistics.Infrastructure.Migrations
                     b.HasIndex("WarehouseId");
 
                     b.ToTable("StockItem");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("6d2a47e4-9517-4a64-8e5c-2e5e762bd3d5"),
+                            ProductId = new Guid("04462214-e73d-4860-abf3-02e3bffd3837"),
+                            Quantity = 40,
+                            SupplierId = new Guid("8ef6d8b1-94da-46aa-94ad-8ddc80c9543d"),
+                            WarehouseId = new Guid("442317ac-de9b-4602-9265-189fbea591fb")
+                        },
+                        new
+                        {
+                            Id = new Guid("4ab7a9f1-680c-41cd-a3c8-af6d5f563b88"),
+                            ProductId = new Guid("fad6955c-7d25-4656-ba26-c78b61f868b5"),
+                            Quantity = 50,
+                            SupplierId = new Guid("8ef6d8b1-94da-46aa-94ad-8ddc80c9543d"),
+                            WarehouseId = new Guid("442317ac-de9b-4602-9265-189fbea591fb")
+                        },
+                        new
+                        {
+                            Id = new Guid("3fa367b4-77b8-46dd-837e-e83241fd5cef"),
+                            ProductId = new Guid("fad6955c-7d25-4656-ba26-c78b61f868b5"),
+                            Quantity = 200,
+                            SupplierId = new Guid("8ef6d8b1-94da-46aa-94ad-8ddc80c9543d"),
+                            WarehouseId = new Guid("8a85717a-9b54-4a7f-91d9-854df84d8a4b")
+                        },
+                        new
+                        {
+                            Id = new Guid("57a6d129-8347-4087-ad1e-6874f0672ad8"),
+                            ProductId = new Guid("d017ef34-c572-484f-8f0e-db6895820e84"),
+                            Quantity = 200,
+                            SupplierId = new Guid("7f4c2666-36e8-4c00-aab7-934ff281a477"),
+                            WarehouseId = new Guid("8a85717a-9b54-4a7f-91d9-854df84d8a4b")
+                        });
                 });
 
             modelBuilder.Entity("Logistics.Domain.Warehouses.Warehouse", b =>
@@ -155,6 +243,20 @@ namespace Logistics.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Warehouse");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("442317ac-de9b-4602-9265-189fbea591fb"),
+                            Name = "Warehouse 1",
+                            Removed = false
+                        },
+                        new
+                        {
+                            Id = new Guid("8a85717a-9b54-4a7f-91d9-854df84d8a4b"),
+                            Name = "Warehouse 2",
+                            Removed = false
+                        });
                 });
 
             modelBuilder.Entity("Logistics.Domain.Products.ProductSupplier", b =>
@@ -231,6 +333,24 @@ namespace Logistics.Infrastructure.Migrations
 
                             b1.WithOwner()
                                 .HasForeignKey("WarehouseId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    WarehouseId = new Guid("442317ac-de9b-4602-9265-189fbea591fb"),
+                                    City = "Varberg",
+                                    PostalCode = "43241",
+                                    Street = "Norrgatan",
+                                    StreetNumber = "13"
+                                },
+                                new
+                                {
+                                    WarehouseId = new Guid("8a85717a-9b54-4a7f-91d9-854df84d8a4b"),
+                                    City = "Falkenberg",
+                                    PostalCode = "31173",
+                                    Street = "Södergatan",
+                                    StreetNumber = "18"
+                                });
                         });
 
                     b.Navigation("Address")

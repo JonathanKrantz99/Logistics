@@ -6,7 +6,7 @@ Running application:
 5. Start application.
 
 User description:
-Skapa varuhus: Post request mot /api/Warehouse. Viktigt att ange en riktigt address.
+Skapa varuhus: Post request mot /api/Warehouse. Viktigt att ange en riktig svensk address.
 
 Skapa leverantörer: Post request mot /api/Supplier
 

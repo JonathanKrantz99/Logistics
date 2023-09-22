@@ -43,19 +43,19 @@ namespace Logistics.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("8e87285a-a19b-4198-a3de-e808e75c64af"),
+                            Id = new Guid("04462214-e73d-4860-abf3-02e3bffd3837"),
                             Name = "Keyboard",
                             Removed = false
                         },
                         new
                         {
-                            Id = new Guid("1d9e6531-357a-46cf-8e25-97d87b6f4efa"),
+                            Id = new Guid("fad6955c-7d25-4656-ba26-c78b61f868b5"),
                             Name = "Headset",
                             Removed = false
                         },
                         new
                         {
-                            Id = new Guid("69daaf92-54b1-432d-a90e-5d8d20f86d44"),
+                            Id = new Guid("d017ef34-c572-484f-8f0e-db6895820e84"),
                             Name = "Monitor",
                             Removed = false
                         });
@@ -83,21 +83,21 @@ namespace Logistics.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("01435be9-eb2c-4dde-94f6-1e90eb3f4190"),
-                            ProductId = new Guid("8e87285a-a19b-4198-a3de-e808e75c64af"),
-                            SupplierId = new Guid("9386a7d2-498f-4c61-997d-f251e785c69c")
+                            Id = new Guid("99fef197-a862-48e8-90e8-6b675e625ef5"),
+                            ProductId = new Guid("04462214-e73d-4860-abf3-02e3bffd3837"),
+                            SupplierId = new Guid("8ef6d8b1-94da-46aa-94ad-8ddc80c9543d")
                         },
                         new
                         {
-                            Id = new Guid("4df454cd-ba22-4beb-b00d-7f448b2a33cb"),
-                            ProductId = new Guid("1d9e6531-357a-46cf-8e25-97d87b6f4efa"),
-                            SupplierId = new Guid("9386a7d2-498f-4c61-997d-f251e785c69c")
+                            Id = new Guid("0be823cd-f299-44a6-8302-54672694ce00"),
+                            ProductId = new Guid("fad6955c-7d25-4656-ba26-c78b61f868b5"),
+                            SupplierId = new Guid("8ef6d8b1-94da-46aa-94ad-8ddc80c9543d")
                         },
                         new
                         {
-                            Id = new Guid("6980d6d6-e0df-4726-a6d0-229b966a5572"),
-                            ProductId = new Guid("69daaf92-54b1-432d-a90e-5d8d20f86d44"),
-                            SupplierId = new Guid("5ebadc88-b0bc-4178-a5e8-d3b5faad8e3a")
+                            Id = new Guid("fa5126c2-7475-4664-a25c-c8afada544ac"),
+                            ProductId = new Guid("d017ef34-c572-484f-8f0e-db6895820e84"),
+                            SupplierId = new Guid("7f4c2666-36e8-4c00-aab7-934ff281a477")
                         });
                 });
 
@@ -122,13 +122,13 @@ namespace Logistics.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9386a7d2-498f-4c61-997d-f251e785c69c"),
+                            Id = new Guid("8ef6d8b1-94da-46aa-94ad-8ddc80c9543d"),
                             Name = "Supplier 1",
                             Removed = false
                         },
                         new
                         {
-                            Id = new Guid("5ebadc88-b0bc-4178-a5e8-d3b5faad8e3a"),
+                            Id = new Guid("7f4c2666-36e8-4c00-aab7-934ff281a477"),
                             Name = "Supplier 2",
                             Removed = false
                         });
@@ -191,27 +191,35 @@ namespace Logistics.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9bb136af-1d61-4858-a002-da47994c6f2c"),
-                            ProductId = new Guid("8e87285a-a19b-4198-a3de-e808e75c64af"),
+                            Id = new Guid("6d2a47e4-9517-4a64-8e5c-2e5e762bd3d5"),
+                            ProductId = new Guid("04462214-e73d-4860-abf3-02e3bffd3837"),
                             Quantity = 40,
-                            SupplierId = new Guid("9386a7d2-498f-4c61-997d-f251e785c69c"),
-                            WarehouseId = new Guid("d1d38bdf-ce2f-4f77-adf5-5d0773bb115e")
+                            SupplierId = new Guid("8ef6d8b1-94da-46aa-94ad-8ddc80c9543d"),
+                            WarehouseId = new Guid("442317ac-de9b-4602-9265-189fbea591fb")
                         },
                         new
                         {
-                            Id = new Guid("663e29e9-4dc3-40e4-9f46-8708389eb30c"),
-                            ProductId = new Guid("1d9e6531-357a-46cf-8e25-97d87b6f4efa"),
+                            Id = new Guid("4ab7a9f1-680c-41cd-a3c8-af6d5f563b88"),
+                            ProductId = new Guid("fad6955c-7d25-4656-ba26-c78b61f868b5"),
                             Quantity = 50,
-                            SupplierId = new Guid("9386a7d2-498f-4c61-997d-f251e785c69c"),
-                            WarehouseId = new Guid("d1d38bdf-ce2f-4f77-adf5-5d0773bb115e")
+                            SupplierId = new Guid("8ef6d8b1-94da-46aa-94ad-8ddc80c9543d"),
+                            WarehouseId = new Guid("442317ac-de9b-4602-9265-189fbea591fb")
                         },
                         new
                         {
-                            Id = new Guid("80629c52-a617-4322-a754-14dc72f508d6"),
-                            ProductId = new Guid("69daaf92-54b1-432d-a90e-5d8d20f86d44"),
+                            Id = new Guid("3fa367b4-77b8-46dd-837e-e83241fd5cef"),
+                            ProductId = new Guid("fad6955c-7d25-4656-ba26-c78b61f868b5"),
                             Quantity = 200,
-                            SupplierId = new Guid("5ebadc88-b0bc-4178-a5e8-d3b5faad8e3a"),
-                            WarehouseId = new Guid("d15e3230-949f-4739-963b-98d27d34f4d2")
+                            SupplierId = new Guid("8ef6d8b1-94da-46aa-94ad-8ddc80c9543d"),
+                            WarehouseId = new Guid("8a85717a-9b54-4a7f-91d9-854df84d8a4b")
+                        },
+                        new
+                        {
+                            Id = new Guid("57a6d129-8347-4087-ad1e-6874f0672ad8"),
+                            ProductId = new Guid("d017ef34-c572-484f-8f0e-db6895820e84"),
+                            Quantity = 200,
+                            SupplierId = new Guid("7f4c2666-36e8-4c00-aab7-934ff281a477"),
+                            WarehouseId = new Guid("8a85717a-9b54-4a7f-91d9-854df84d8a4b")
                         });
                 });
 
@@ -236,13 +244,13 @@ namespace Logistics.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d1d38bdf-ce2f-4f77-adf5-5d0773bb115e"),
+                            Id = new Guid("442317ac-de9b-4602-9265-189fbea591fb"),
                             Name = "Warehouse 1",
                             Removed = false
                         },
                         new
                         {
-                            Id = new Guid("d15e3230-949f-4739-963b-98d27d34f4d2"),
+                            Id = new Guid("8a85717a-9b54-4a7f-91d9-854df84d8a4b"),
                             Name = "Warehouse 2",
                             Removed = false
                         });
@@ -326,7 +334,7 @@ namespace Logistics.Infrastructure.Migrations
                             b1.HasData(
                                 new
                                 {
-                                    WarehouseId = new Guid("d1d38bdf-ce2f-4f77-adf5-5d0773bb115e"),
+                                    WarehouseId = new Guid("442317ac-de9b-4602-9265-189fbea591fb"),
                                     City = "Varberg",
                                     PostalCode = "43241",
                                     Street = "Norrgatan",
@@ -334,7 +342,7 @@ namespace Logistics.Infrastructure.Migrations
                                 },
                                 new
                                 {
-                                    WarehouseId = new Guid("d15e3230-949f-4739-963b-98d27d34f4d2"),
+                                    WarehouseId = new Guid("8a85717a-9b54-4a7f-91d9-854df84d8a4b"),
                                     City = "Falkenberg",
                                     PostalCode = "31173",
                                     Street = "Södergatan",

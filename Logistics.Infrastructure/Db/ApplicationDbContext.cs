@@ -65,6 +65,7 @@ namespace Logistics.Infrastructure.Db
             modelBuilder.Entity<StockItem>().HasData(
                 new { Id = Guid.NewGuid(), WarehouseId = warehouse1.Id, ProductId = product1.Id, SupplierId = supplier1.Id, Quantity = 40 },
                 new { Id = Guid.NewGuid(), WarehouseId = warehouse1.Id, ProductId = product2.Id, SupplierId = supplier1.Id, Quantity = 50 },
+                new { Id = Guid.NewGuid(), WarehouseId = warehouse2.Id, ProductId = product2.Id, SupplierId = supplier1.Id, Quantity = 200 },
                 new { Id = Guid.NewGuid(), WarehouseId = warehouse2.Id, ProductId = product3.Id, SupplierId = supplier2.Id, Quantity = 200 }
                 );
         }

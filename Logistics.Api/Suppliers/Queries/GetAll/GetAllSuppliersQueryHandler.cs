@@ -24,8 +24,18 @@ namespace Logistics.Api.Suppliers.Queries.GetAll
 
             foreach (var supplierDTO in suppliers)
             {
-                supplierDTO.Products = stockItems.Where(x => x.SupplierId == supplierDTO.Id)
-                                                 .Select(x => new SupplierStockItemDTO { WarehouseId = x.WarehouseId, ProductId = x.ProductId, Quantity = x.Quantity }).ToList();
+                var stockItemsSupplier = stockItems.Where(x => x.SupplierId == supplierDTO.Id).GroupBy(x => x.ProductId).ToList();
+
+                supplierDTO.Products = new List<SupplierProductDTO>();
+                foreach (var item in stockItemsSupplier)
+                {
+                    var supplierProduct = new SupplierProductDTO();
+
+                    supplierProduct.Id = item.Key;
+                    supplierProduct.Warehouses = item.ToList().Select(x => new ValuePair { WarehouseId = x.WarehouseId, Quantity = x.Quantity }).ToList();
+
+                    supplierDTO.Products.Add(supplierProduct);
+                }
             }
 
             return suppliers;
