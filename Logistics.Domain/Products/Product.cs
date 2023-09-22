@@ -43,7 +43,7 @@ namespace Logistics.Domain.Products
 
         public void RemoveSupplier(Guid supplierId)
         {
-            var productSupplier = _productSuppliers.FirstOrDefault(x => x.Id == supplierId);
+            var productSupplier = _productSuppliers.FirstOrDefault(x => x.SupplierId == supplierId);
             _productSuppliers.Remove(productSupplier);
         }
 
