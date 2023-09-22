@@ -41,18 +41,18 @@ namespace Logistics.Infrastructure.Db
                 new
                 {
                     WarehouseId = warehouse1.Id,
-                    Street = "Träslövsvägen",
-                    StreetNumber = "171G",
+                    Street = "Norrgatan",
+                    StreetNumber = "13",
                     City = "Varberg",
-                    PostalCode = "43237"
+                    PostalCode = "43241"
                 },
                 new
                 {
                     WarehouseId = warehouse2.Id,
-                    Street = "Föreningsgatan",
-                    StreetNumber = "56",
-                    City = "Varberg",
-                    PostalCode = "43236"
+                    Street = "Södergatan",
+                    StreetNumber = "18",
+                    City = "Falkenberg",
+                    PostalCode = "31173"
                 }
                 );
 
